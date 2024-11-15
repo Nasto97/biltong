@@ -15,6 +15,7 @@ header h1 {
   color: #ffffff;
   font-size: 50px;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
@@ -37,18 +38,18 @@ header p {
 .shop-card {
   width: 250px;
   border: 1px solid #ddd;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   padding: 15px;
 }
 
 .shop-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .shop-card img {
@@ -59,28 +60,37 @@ header p {
 }
 
 .shop-card h2 {
-  font-size: 1.3em;
+  font-size: 1.4em;
+  color: #333;
   margin: 15px 0 10px;
+  transition: color 0.3s ease;
+}
+
+.shop-card:hover h2 {
+  color: #4caf50;
 }
 
 .shop-card p {
   font-size: 1em;
+  color: #666;
   margin: 5px 0;
 }
 
 .shop-card .button {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
+  margin-top: 15px;
+  padding: 10px 20px;
   color: white;
   background-color: #4caf50;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .shop-card .button:hover {
   background-color: #388e3c;
+  transform: scale(1.05);
 }
 
 /* Footer styling */
@@ -88,6 +98,9 @@ footer {
   margin-top: 40px;
   color: #ffffff;
   font-size: 0.9em;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
 }
 
 footer p {
@@ -95,8 +108,14 @@ footer p {
 }
 
 footer a {
-  color: #333;
-  text-decoration: underline;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #388e3c;
 }
 
 /* Media queries for responsiveness */
@@ -105,4 +124,156 @@ footer a {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* General page styling remains the same */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  background-image: url("Images/background2.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Promotions Section */
+.promotions {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000; /* Changed text color for readability */
+  text-align: center;
+  border-radius: 10px;
+  max-width: 850px;
+  width: 100%;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.promotions h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: red;
+}
+
+/* Promotions Section */
+.promotions {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 850px;
+  width: 100%;
+  overflow: hidden; /* Hide overflow for a clean appearance */
+}
+
+/* Title Styles */
+.promotions h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: red;
+}
+
+/* Promotions Section */
+.promotions {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 850px;
+  width: 100%;
+  overflow: hidden; /* Hide overflow for a clean appearance */
+}
+
+/* Title Styles */
+.promotions h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: red;
+}
+
+/* Promo Slider Container */
+.promo-slider {
+  display: flex; /* Arrange slides in a row */
+  will-change: transform; /* Optimize animation performance */
+  cursor: grab; /* Indicate that the slider is draggable */
+  animation: scroll 20s linear infinite; /* Continuous scrolling animation */
+}
+
+/* Promo Slide Adjustments */
+.promo-slide {
+  flex: 0 0 auto; /* Ensure each slide maintains its size */
+  width: 33%; /* Reduce the width to make the slides closer together */
+  text-align: center;
+  box-sizing: border-box;
+  padding-right: 10px; /* Add space between slides */
+  margin-bottom: 20px; /* Add bottom margin to separate the rows */
+}
+
+/* Image Styles */
+.promo-slide img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Promo Info */
+.promo-info h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #4caf50;
+}
+
+.promo-info p {
+  font-size: 1em;
+  color: red;
+}
+
+/* Links */
+.promo-slide a {
+  text-decoration: none;
+  color: inherit; /* Ensure link text inherits the color of surrounding text */
+}
+
+/* Continuous Scrolling Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Footer styling */
+footer {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 0.9em;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+footer a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #388e3c;
 }
