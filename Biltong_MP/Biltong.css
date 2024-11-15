@@ -252,6 +252,41 @@ body {
     transform: translateX(-100%);
   }
 }
+.promo-slider-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.promo-slider {
+  display: flex;
+  gap: 20px; /* Add space between slides */
+  cursor: grab; /* Indicate that the slider is draggable */
+}
+
+.promo-slide {
+  flex: 0 0 auto;
+  width: 250px; /* Set consistent width for slides */
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.promo-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.promo-slide:hover {
+  transform: scale(1.05);
+}
 
 /* Footer styling */
 footer {
